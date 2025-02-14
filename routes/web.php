@@ -20,3 +20,7 @@ Route::get('/', function () {
 Route::get('/about', function() {
     return "My About Page";
 });
+
+use App\Http\Controllers\AboutController;
+Route::get('/about', [AboutController::class, 'show']);
+
